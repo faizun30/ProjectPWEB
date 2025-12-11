@@ -9,14 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="container">
         <div class="card">
             <div class="page-header">
-                <h2><i class='bx bx-search-alt'></i> Lost & Found Kampus</h2>
+                <h2><i class='bx bx-search-alt'></i> Sitem Laporan Barang Hilang</h2>
                 
                 <div class="search-box">
                     <i class='bx bx-search'></i>
@@ -90,6 +90,6 @@
     </script>
     <?php endif; ?>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
