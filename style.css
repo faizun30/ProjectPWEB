@@ -1,0 +1,215 @@
+/* --- Variabel Warna & Setup --- */
+:root {
+  --primary-color: #4e73df; /* Biru modern */
+  --secondary-color: #858796; /* Abu-abu */
+  --success-color: #1cc88a; /* Hijau */
+  --danger-color: #e74a3b; /* Merah */
+  --warning-color: #f6c23e; /* Kuning */
+  --dark-color: #2e3245; /* Teks gelap */
+  --light-bg: #f8f9fc; /* Latar belakang terang */
+  --card-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15); /* Bayangan halus */
+  --border-radius: 10px; /* Sudut membulat */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif; /* Menggunakan font baru */
+  background-color: var(--light-bg);
+  color: var(--dark-color);
+  padding: 30px;
+}
+
+/* --- Komponen Container & Card --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Efek kartu putih melayang */
+.card {
+  background: white;
+  padding: 35px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  margin-bottom: 30px;
+}
+
+/* Header Halaman */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f1f2f6;
+  padding-bottom: 15px;
+}
+
+.page-header h2 {
+  font-weight: 600;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+.page-header h2 i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+/* --- Form Styling Modern --- */
+.form-group {
+  margin-bottom: 20px;
+}
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d1d3e2;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: #fdfdfd;
+}
+
+/* Efek saat diklik (Focus) */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.1); /* Cahaya biru halus */
+}
+
+/* --- Tombol (Buttons) dengan Ikon --- */
+.btn {
+  padding: 10px 20px;
+  border-radius: 50px; /* Tombol lonjong */
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+/* Efek hover tombol */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+.btn-warning {
+  background-color: var(--warning-color);
+  color: var(--dark-color);
+}
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+.btn-secondary {
+  background-color: #e2e6ea;
+  color: var(--dark-color);
+}
+.btn-block {
+  width: 100%;
+  justify-content: center;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* --- Tabel Modern --- */
+.table-responsive {
+  overflow-x: auto;
+} /* Agar bisa discroll di HP */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* Jarak antar baris */
+  margin-top: 10px;
+}
+
+th {
+  text-align: left;
+  padding: 15px;
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border-bottom: 2px solid #f1f2f6;
+}
+
+/* Baris data seperti kartu kecil */
+td {
+  background: white;
+  padding: 15px;
+  vertical-align: middle;
+  border-top: 1px solid #f1f2f6;
+  border-bottom: 1px solid #f1f2f6;
+}
+/* Membuat sudut membulat di awal dan akhir baris */
+td:first-child {
+  border-left: 1px solid #f1f2f6;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+td:last-child {
+  border-right: 1px solid #f1f2f6;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+tbody tr:hover td {
+  background-color: #f8f9fc;
+} /* Hover effect di baris */
+
+/* Badge Status */
+.badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+.badge-danger {
+  background-color: #ffecec;
+  color: var(--danger-color);
+}
+.badge-success {
+  background-color: #e6fffa;
+  color: var(--success-color);
+}
+
+/* Fitur Search di Index */
+.search-box {
+  position: relative;
+  max-width: 300px;
+}
+.search-box input {
+  padding-left: 35px;
+  border-radius: 50px;
+}
+.search-box i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary-color);
+}
