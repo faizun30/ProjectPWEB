@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "db_sistem_laporan_barang_hilang"; // PENTING: Sesuaikan dengan nama database Anda tadi
+$db   = "db_sistem_laporan_barang_hilang";
 
 $koneksi = mysqli_connect($host, $user, $pass, $db);
 
