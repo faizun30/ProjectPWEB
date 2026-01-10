@@ -1,14 +1,12 @@
 <?php
 include 'koneksi.php';
 
-// Ambil ID dari URL
 $id = $_GET['id'];
 
-// Ambil data lama dari database
 $data_awal = mysqli_query($koneksi, "SELECT * FROM barang_temuan WHERE id='$id'");
 $d = mysqli_fetch_array($data_awal);
 
-// Proses Update Data Baru
+
 if (isset($_POST['update'])) {
     $nama = $_POST['nama_barang'];
     $lokasi = $_POST['lokasi_ditemukan'];
