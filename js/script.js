@@ -1,4 +1,3 @@
-// 1. Fitur Live Search (Pencarian Instan di Tabel)
 function searchTable() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("searchInput");
@@ -6,13 +5,12 @@ function searchTable() {
   table = document.getElementById("dataTable");
   tr = table.getElementsByTagName("tr");
 
-  // Looping semua baris tabel
   for (i = 0; i < tr.length; i++) {
-    // Cek kolom Nama Barang (indeks ke-1)
+    
     td = tr[i].getElementsByTagName("td")[1];
     if (td) {
       txtValue = td.textContent || td.innerText;
-      // Jika cocok, tampilkan. Jika tidak, sembunyikan (display: none)
+      
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
@@ -22,13 +20,12 @@ function searchTable() {
   }
 }
 
-// 2. Validasi Form (Pakai SweetAlert Error)
 function validasiInput(event) {
   var nama = document.forms["formBarang"]["nama_barang"].value;
   var lokasi = document.forms["formBarang"]["lokasi_ditemukan"].value;
 
   if (nama == "" || lokasi == "") {
-    event.preventDefault(); // Mencegah form submit
+    event.preventDefault(); 
     Swal.fire({
       icon: "error",
       title: "Oops...",
@@ -40,9 +37,8 @@ function validasiInput(event) {
   return true;
 }
 
-// 3. Konfirmasi Hapus Modern (Pakai SweetAlert Confirm)
 function konfirmasiHapus(id, event) {
-  event.preventDefault(); // Mencegah link langsung jalan
+  event.preventDefault(); 
 
   Swal.fire({
     title: "Yakin hapus data ini?",
@@ -55,7 +51,7 @@ function konfirmasiHapus(id, event) {
     cancelButtonText: "Batal",
   }).then((result) => {
     if (result.isConfirmed) {
-      // Jika klik YA, baru arahkan ke hapus.php
+  
       window.location.href = "hapus.php?id=" + id;
     }
   });
