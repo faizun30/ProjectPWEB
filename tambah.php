@@ -2,7 +2,7 @@
 include 'koneksi.php';
 
 if (isset($_POST['simpan'])) {
-    // (Bagian ambil data $_POST)
+    
     $nama = $_POST['nama_barang'];
     $lokasi = $_POST['lokasi_ditemukan'];
     $tgl = $_POST['tanggal_ditemukan'];
@@ -14,7 +14,7 @@ if (isset($_POST['simpan'])) {
     $result = mysqli_query($koneksi, $query);
 
     if ($result) {
-        // Redirect dengan parameter pesan sukses
+        
         header("Location: index.php?pesan=sukses");
     } else {
         echo "Gagal: " . mysqli_error($koneksi);
