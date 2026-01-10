@@ -56,7 +56,7 @@
                             </td>
                             <td>
                                 <?php 
-                                // Menggunakan Badge Modern
+                                
                                 if($data['status'] == 'Belum Diambil'){
                                     echo "<span class='badge badge-danger'>Belum Diambil</span>";
                                 } else {
